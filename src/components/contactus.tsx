@@ -1,6 +1,9 @@
-const Contact = () => {
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+const ContactUS = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white pt-20 ">
       <div className="mx-auto">
 
         {/* Heading */}
@@ -28,7 +31,7 @@ const Contact = () => {
             <div className="space-y-4 text-lg text-gray-700">
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/map.svg"  alt="Map"
+                   src="/Icons/map.svg" 
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">
@@ -43,7 +46,7 @@ const Contact = () => {
 
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/call.svg" alt="Phone Icon"
+                   src="/Icons/call.svg" 
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0"> 
@@ -54,9 +57,9 @@ const Contact = () => {
                 </div>
               </div>
 
-                <div className="flex items-start gap-5">
+              <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/Email.svg" alt="Email Icon"
+                   src="/Icons/Email.svg" 
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">
@@ -69,7 +72,7 @@ const Contact = () => {
 
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/business hours.svg" alt="Business Hours Icon"
+                   src="/Icons/business hours.svg" 
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">
@@ -156,4 +159,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUS;

@@ -2,6 +2,14 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+    const linkStyle = ({ isActive }: { isActive: boolean }) =>
+      isActive
+        ? "text-[#9BC53D] font-semibold"
+        : "hover:text-[#9BC53D] transition";
+  
+
   return (
     <footer className="w-full bg-[#0F172A] border-t border-gray-200 mt-20 bottom-0 left-0 z-50">
       <div className="max-w-8xl mx-auto py-12 px-28">
@@ -20,9 +28,9 @@ const Footer = () => {
               Leading provider of smart identity and payment solutions across Africa.
             </p>
             <div className="flex items-center gap-4 mt-4">
-              <img src="/Icons/facebook.svg" className="w-6 h-6" />
-            <img src="/Icons/twitter.svg" className="w-6 h-6" />
-            <img src="/Icons/linkedin.svg" className="w-6 h-6" />
+              <img src="/Icons/facebook.svg" alt="Facebook" className="w-6 h-6" />
+            <img src="/Icons/twitter.svg" alt="Twitter" className="w-6 h-6" />
+            <img src="/Icons/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
             </div>
           </div>
 
@@ -31,14 +39,14 @@ const Footer = () => {
             <h3 className="text-m font-bold text-white mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-m text-[#D1D5DB]">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+              <ul className="space-y-2 text-m text-[#D1D5DB]">
+                <li><NavLink to="/" className={linkStyle}>Home</NavLink></li>
+                <li><NavLink to="/about" className={linkStyle}>About Us</NavLink></li>
+                <li><NavLink to="/services" className={linkStyle}>Services</NavLink></li>
+                <li><NavLink to="/resources" className={linkStyle}>Resources</NavLink></li>
+                <li><NavLink to="/career" className={linkStyle}>Careers</NavLink></li>
+                <li><NavLink to="/contact-us" className={linkStyle}>Contact</NavLink></li>
+              </ul>
           </div>
 
           {/* Support */}
@@ -63,17 +71,17 @@ const Footer = () => {
             <ul className="space-y-2 text-m text-[#D1D5DB]">
 
             <li className="flex items-start gap-3">
-              <img src="/Icons/locate.svg" className="w-5 h-5 mt-1" />
+              <img src="/Icons/locate.svg" alt="Map" className="w-5 h-5 mt-1" />
               <span>8, Louis Solomon Close, Victoria Island, Lagos</span>
             </li>
 
             <li className="flex items-center gap-3">
-              <img src="/Icons/phone.svg" className="w-5 h-5" />
+              <img src="/Icons/phone.svg" alt="Phone" className="w-5 h-5" />
               <span>+234 808 034 5389</span>
             </li>
 
             <li className="flex items-center gap-3">
-              <img src="/Icons/email2.svg" className="w-5 h-5" />
+              <img src="/Icons/email2.svg" alt="Email" className="w-5 h-5" />
               <span>info@cardcentre.com.ng</span>
             </li>
            </ul>

@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 export default function LandingPage() {
     return (
         <main className="w-full bg-[#f6f8fb]">
@@ -46,12 +43,12 @@ export default function LandingPage() {
                 {/* Right Image Grid */}
                 <div className="flex justify-center relative z-10 gap-4">
                     <div>
-                        <img src="/Images/hero1.svg" className="rounded-xl object-cover h-auto w-80" />
-                        <img src="/Images/hero3.svg" className="rounded-xl object-cover h-auto w-80 mt-6" />
+                        <img src="/Images/hero1.svg" alt="hero1" className="rounded-xl object-cover h-auto w-80" />
+                        <img src="/Images/hero3.svg" alt="hero3" className="rounded-xl object-cover h-auto w-80 mt-6" />
                     </div>
                     <div className="mt-8">
-                        <img src="/Images/hero2.svg" className="rounded-xl object-cover  h-auto w-80" />
-                        <img src="/Images/hero4.svg" className="rounded-xl object-cover  h-auto w-80 mt-6" />
+                        <img src="/Images/hero2.svg" alt="hero2" className="rounded-xl object-cover  h-auto w-80" />
+                        <img src="/Images/hero4.svg" alt="hero4" className="rounded-xl object-cover  h-auto w-80 mt-6" />
                     </div>    
                 </div>
             </section>

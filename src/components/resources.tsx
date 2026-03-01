@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 export default function Resources() {
     return (
         <main className="w-full bg-[#f6f8fb]">

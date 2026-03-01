@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 const Services: React.FC = () => {
   return (
     <div className="w-full bg-[#F8FAFC]">
@@ -27,7 +24,7 @@ const Services: React.FC = () => {
           />
 
           <div className="py-5">
-            <img src="/Icons/sim.svg" className="w-12 h-12 mb-7 object-contain"/>
+            <img src="/Icons/sim.svg" alt="SIM Card" className="w-12 h-12 mb-7 object-contain"/>
             <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
               SIM Card Manufacturing
             </h2>
@@ -66,7 +63,7 @@ const Services: React.FC = () => {
         {/* ===== 2. Financial Card Solutions ===== */}
         <div className="py-20 px-20 grid md:grid-cols-2 items-center">
           <div className="py-5 px-12">
-            <img src="/Icons/fin.svg" className="w-12 h-12 mb-7 object-contain"/>
+            <img src="/Icons/fin.svg" alt="Financial Card" className="w-12 h-12 mb-7 object-contain"/>
             <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
               Financial Card Solutions
             </h2>
@@ -117,7 +114,7 @@ const Services: React.FC = () => {
           />
 
           <div className="py-4">
-            <img src="/Icons/id.svg" className="w-12 h-12 mb-7 object-contain"/>
+            <img src="/Icons/id.svg" alt="Identity Card" className="w-12 h-12 mb-7 object-contain"/>
             <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
               Identity Card Management
             </h2>
@@ -156,7 +153,7 @@ const Services: React.FC = () => {
         {/* ===== 4. Data & Event Management ===== */}
         <div className="py-20 px-20 grid md:grid-cols-2 items-center">
           <div className="py-5 px-12">
-            <img src="/Icons/data.svg" className="w-12 h-12 mb-7 object-contain"/>
+            <img src="/Icons/data.svg" alt="Data & Event Management" className="w-12 h-12 mb-7 object-contain"/>
             <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
               Data & Event Management
             </h2>

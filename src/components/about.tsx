@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 export default function About() {
     return (
         <main className="w-full bg-[#FFFFFF]">
@@ -13,7 +10,7 @@ export default function About() {
                     </h2>
 
                     <div className="rounded-2xl overflow-hidden shadow-md">
-                        <img src="/Images/about-building.svg" className="w-full h-auto object-cover" />
+                        <img src="/Images/about-building.svg" alt="building" className="w-full h-auto object-cover" />
                     </div>
                 </div>
             </section>
@@ -44,7 +41,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <img src="/Images/about-team.svg" className="rounded-xl shadow-md object-cover h-72 w-full h-auto" />
+                        <img src="/Images/about-team.svg" alt="Team" className="rounded-xl shadow-md object-cover h-72 w-full h-auto" />
                 </div>
             </section>
 
@@ -52,7 +49,7 @@ export default function About() {
                     {/* Mission & Vision */}
                     <div className=" max-w-7xl mx-auto grid md:grid-cols-2 gap-10 mt-5">
                        <div className="bg-white py-16 px-10 rounded-2xl shadow-lg">
-                            <img src="/Icons/mission.svg" className="w-12 h-12 mb-6 object-contain"/>
+                            <img src="/Icons/mission.svg" alt="Company Mission Icon" className="w-12 h-12 mb-6 object-contain"/>
                             <h4 className="font-bold text-2xl mb-3">Our Mission</h4>
                             <p className="text-gray-600 text-xl pr-8">
                                 To deliver secure, reliable, and innovative card and 
@@ -61,7 +58,7 @@ export default function About() {
                         </div>
 
                         <div className="bg-gradient-to-br from-[#9BC53D] to-[#5D7428] py-16 px-10 text-white rounded-2xl shadow-lg">
-                            <img src="/Icons/vision.svg" className="w-12 h-12 mb-6 object-contain"/>
+                            <img src="/Icons/vision.svg" alt="Company Vision Icon" className="w-12 h-12 mb-6 object-contain"/>
                             <h4 className="font-bold text-2xl mb-3">Our Vision</h4>
                             <p className="text-xl">
                                 To be Africa's most trusted smart identity and payment provider, 

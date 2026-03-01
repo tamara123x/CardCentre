@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
 const Career: React.FC = () => {
   return (
     <div className="w-full bg-[#F8FAFC]">
@@ -42,7 +39,7 @@ const Career: React.FC = () => {
               {/* Career Growth */}
               <div className="flex items-start gap-4">
                 <div className="flex items-center justify-center">
-                  <img src="/Icons/career.svg" className="mt-2" />
+                  <img src="/Icons/career.svg" alt="Career Growth" className="mt-2" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-[#0F172A]">
@@ -57,7 +54,7 @@ const Career: React.FC = () => {
               {/* Collaborative */}
               <div className="flex items-start gap-4">
                 <div className="flex items-center justify-center">
-                  <img src="/Icons/collab.svg" className="mt-2" />
+                  <img src="/Icons/collab.svg" alt="Collaborative" className="mt-2" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-[#0F172A]">
@@ -72,7 +69,7 @@ const Career: React.FC = () => {
               {/* Innovative */}
               <div className="flex items-start gap-4">
                 <div className="flex items-center justify-center">
-                  <img src="/Icons/innovate.svg" className="mt-2" />
+                  <img src="/Icons/innovate.svg" alt="Innovative" className="mt-2" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-[#0F172A]">
@@ -87,7 +84,7 @@ const Career: React.FC = () => {
               {/* Learning */}
               <div className="flex items-start gap-4">
                 <div className="flex items-center justify-center">
-                  <img src="/Icons/learn.svg" className="mt-2" />
+                  <img src="/Icons/learn.svg" alt="Learning" className="mt-2" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-[#0F172A]">

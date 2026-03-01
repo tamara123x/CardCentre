@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
+import logo from './logo.svg'
 
 import Nav from "../src/components/nav";
 import Footer from "./components/footer";
@@ -10,6 +11,7 @@ import Career from "./components/career";
 import Services from "./components/service";
 import Resources from "./components/resources";
 import About from "./components/about";
+
 
 function App() {
   return (

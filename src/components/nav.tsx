@@ -16,7 +16,7 @@ const Nav = () => {
 
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/Icons/logo.svg" className="w-14 h-14 object-contain mr-3" />
+            <img src="/Icons/logo.svg" alt="CardCentre Nigeria Logo" className="w-14 h-14 object-contain mr-3" />
             <div className="text-3xl font-extrabold">
               <span className="text-[#9BC53D]">CardCentre</span>
               <span className="text-[#0F172A] ml-1 font-medium">Nigeria</span>
