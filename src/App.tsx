@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import logo from './logo.svg'
+// import logo from './logo.svg'
 
 import Nav from "../src/components/nav";
 import Footer from "./components/footer";

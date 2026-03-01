@@ -31,7 +31,7 @@ const ContactUS = () => {
             <div className="space-y-4 text-lg text-gray-700">
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/map.svg" 
+                   src="/Icons/map.svg" alt="Map"
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">
@@ -46,7 +46,7 @@ const ContactUS = () => {
 
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/call.svg" 
+                   src="/Icons/call.svg" alt="Call"
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0"> 
@@ -59,7 +59,7 @@ const ContactUS = () => {
 
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/Email.svg" 
+                   src="/Icons/Email.svg" alt="Email"
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">
@@ -72,7 +72,7 @@ const ContactUS = () => {
 
               <div className="flex items-start gap-5">
                 <img 
-                   src="/Icons/business hours.svg" 
+                   src="/Icons/business hours.svg" alt="Business Hours"
                    className="w-10 h-10 mt-2 object-contain"
                 />
                 <div className="space-y-0">

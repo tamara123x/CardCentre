@@ -2,9 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-    const linkStyle = ({ isActive }: { isActive: boolean }) =>
+     const linkStyle = ({ isActive }: { isActive: boolean }) =>
       isActive
         ? "text-[#9BC53D] font-semibold"
         : "hover:text-[#9BC53D] transition";
@@ -55,10 +53,10 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-2 text-m text-[#D1D5DB]">
-              <li><a href="#">SIM Card Production</a></li>
-              <li><a href="#">Financial Cards</a></li>
-              <li><a href="#">Identity Solutions</a></li>
-              <li><a href="#">Event Management</a></li>
+              <li>SIM Card Production</li>
+              <li>Financial Cards</li>
+              <li>Identity Solutions</li>
+              <li>Event Management</li>
             </ul>
           </div>
 

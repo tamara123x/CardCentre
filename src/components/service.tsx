@@ -37,19 +37,19 @@ const Services: React.FC = () => {
 
             <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>State-of-the-art manufacturing facilities</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>ISO-certified production processes</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Rapid turnaround and scalable capacity</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Comprehensive distribution network</span>
               </li>
             </ul>
@@ -76,19 +76,19 @@ const Services: React.FC = () => {
 
             <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>MasterCard and Verve certified</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>EMV chip and magnetic stripe solutions</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Secure personalization environment</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Complete fulfillment services</span>
               </li>
             </ul>
@@ -127,19 +127,19 @@ const Services: React.FC = () => {
 
             <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>National ID and citizen card solutions</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Corporate employee ID and access cards</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Loyalty and membership card programs</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Biometric and smart card integration</span>
               </li>
             </ul>
@@ -166,19 +166,19 @@ const Services: React.FC = () => {
 
             <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>On-site event registration systems</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Real-time badge printing and personalization</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Digital attendance tracking and reporting</span>
               </li>
               <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" className="w-4 h-4" />
+                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
                 <span>Data analytics and insights</span>
               </li>
             </ul>
