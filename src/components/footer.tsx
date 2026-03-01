@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -97,17 +96,17 @@ const Footer = () => {
             </div>
 
             {/* Right Side */}
-            <div className="flex space-x-8">
-              <a href="#" className="hover:text-[#698ac3] transition">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-[#698ac3] transition">
-                Cookie Policy
-              </a>
-              <a href="#" className="hover:text-[#698ac3] transition">
-                Terms of Service
-              </a>
-            </div>
+             <div className="flex space-x-8">
+                  <NavLink to="/privacy-policy" className="hover:text-[#698ac3] transition">
+                    Privacy Policy
+                  </NavLink>
+                  <NavLink to="/cookie-policy"className="hover:text-[#698ac3] transition">
+                    Cookie Policy
+                  </NavLink>
+                  <NavLink to="/terms-of-service"className="hover:text-[#698ac3] transition">
+                    Terms of Service
+                  </NavLink>
+              </div>
           </div>
         </div>
       </div>
