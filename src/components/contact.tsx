@@ -25,7 +25,7 @@ const Contact = () => {
               </h3>
             </div>
 
-            <div className="space-y-4 text-lg text-gray-700">
+            <div className="space-y-10 text-lg text-gray-700">
               <div className="flex items-start gap-5">
                 <img 
                    src="/Icons/map.svg"  alt="Map"
@@ -35,7 +35,7 @@ const Contact = () => {
                     <h3 className="text-m font-bold text-gray-900"> 
                   Head Office
                 </h3>
-                <p className="mt-2 text-m text-gray-600 pr-52 mr-40">
+                <p className="mt-2 text-m text-gray-600">
                   8, Louis Solomon Close Victoria Island, Lagos Nigeria
                 </p>
                 </div>

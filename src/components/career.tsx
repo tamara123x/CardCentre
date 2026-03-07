@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const Career: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full bg-[#F8FAFC]">
 
@@ -147,11 +150,15 @@ const Career: React.FC = () => {
         </p>
 
         <div className="flex justify-center gap-6 flex-wrap">
-          <button className="bg-[#9BC53D] hover:bg-[#74a804] transition text-lg px-8 py-3 rounded-full text-white font-medium shadow-md">
+          <button 
+            onClick={() => navigate("/roles")}
+            className="bg-[#9BC53D] hover:bg-[#74a804] transition text-lg px-8 py-3 rounded-full text-white font-medium shadow-md">
             View Open Roles
           </button>
 
-          <button className="border-2 border-[#9BC53D] text-[#9BC53D] hover:bg-green-50 transition text-lg px-8 py-3 rounded-full font-medium">
+          <button 
+            onClick={() => navigate("/roles")}
+            className="border-2 border-[#9BC53D] text-[#9BC53D] hover:bg-green-50 transition text-lg px-8 py-3 rounded-full font-medium">
             Submit Your CV
           </button>
         </div>

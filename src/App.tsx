@@ -1,71 +1,66 @@
-// import React from 'react';
 import { Routes, Route } from "react-router-dom";
-// import logo from './logo.svg'
 
-import Nav from "../src/components/nav";
+import Nav from "./components/nav";
 import Footer from "./components/footer";
+import ScrollToTop from "./components/Scrolltotop";
 
 import Contact from "./components/contact";
-import LandingPage from './components/landing';
+import LandingPage from "./components/landing";
 import Career from "./components/career";
 import Services from "./components/service";
 import Resources from "./components/resources";
+import ResourcesInfo from "./components/resourcesinfo";
+import Roles from "./components/roles";
+import Policy from "./components/policy";
 import About from "./components/about";
-
+import AboutUS from "./components/aboutus";
 
 function App() {
   return (
     <>
       <Nav />
 
-      {/* Add top padding because nav is fixed */}
+      {/* Scroll page to top on route change */}
+      <ScrollToTop />
+
       <div className="pt-20">
 
         <Routes>
 
-          {/* HOME PAGE */}
+          {/* HOME */}
           <Route
             path="/"
             element={
               <>
                 <LandingPage />
                 <About />
-                <Resources />
-                <Contact />
               </>
             }
           />
 
-          {/* ABOUT US PAGE */}
-          <Route
-            path="/about"
-            element={
-              <>
-                <About />
-                <Contact />
-              </>
-            }
-          />
+          {/* ABOUT */}
+          <Route path="/about" element={<AboutUS />} />
 
-          {/* SERVICES PAGE */}
-          <Route
-            path="/services"
-            element={
-              <>
-                <Services />
-                <Contact />
-              </>
-            }
-          />
+          {/* SERVICES */}
+          <Route path="/services" element={<Services />} />
 
-          {/* RESOURCES PAGE */}
+          {/* RESOURCES */}
           <Route path="/resources" element={<Resources />} />
 
-          {/* CAREER PAGE */}
+          {/* RESOURCE BLOG */}
+          <Route path="/resources-info" element={<ResourcesInfo />} />
+
+          {/* CAREER */}
           <Route path="/career" element={<Career />} />
 
-          {/* CONTACT US PAGE */}
+          {/* ROLE PAGE */}
+          <Route path="/roles" element={<Roles />} />
+
+          {/* CONTACT */}
           <Route path="/contact-us" element={<Contact />} />
+
+          {/* POLICY PAGE */}
+          <Route path="/policy" element={<Policy />} />
 
         </Routes>
 
@@ -75,5 +70,5 @@ function App() {
     </>
   );
 }
-// className="min-h-screen bg-gray-100 flex items-center justify-center"
+
 export default App;

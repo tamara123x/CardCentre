@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Resources() {
+    const navigate = useNavigate();
+
     return (
         <main className="w-full bg-[#f6f8fb]">
             {/* ================= RESOURCES & INSIGHTS ================= */}
-            <section className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-24">
+            <section className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-20">
                 <div className="max-w-7xl text-center mx-auto px-6">
                     <h2 className="text-5xl font-extrabold text-[#0f172a]">
                         Resources & Insights
@@ -15,7 +19,7 @@ export default function Resources() {
             </section>
 
             <section className="bg-[#FFFFFF] border-b border-gray-200 py-2 pb-6">
-                <div className="flex flex-wrap max-w-7xl mx-auto px-6 justify-center gap-3 mt-4">
+                <div className="flex flex-wrap max-w-7xl mx-auto px-6 justify-center gap-6 mt-4">
                     {[
                         "All Articles",
                         "Digital Identity",
@@ -72,7 +76,9 @@ export default function Resources() {
                             May 15, 2024 • 8 min read
                         </p>
 
-                        <button className="text-[#9BC53D] font-medium mt-6 text-left hover:underline">
+                        <button 
+                            onClick={() => navigate("/resources-info")}
+                            className="text-[#9BC53D] font-medium mt-6 text-left hover:underline">
                             Read Full Article →
                         </button>
                     </div>
@@ -162,7 +168,9 @@ export default function Resources() {
                                         {post.date} • {post.read}
                                     </p>
 
-                                    <button className="text-[#9BC53D] text-sm mt-4 font-medium hover:underline">
+                                    <button 
+                                        onClick={() => navigate("/resources-info")}
+                                        className="text-[#9BC53D] text-sm mt-4 font-medium hover:underline">
                                         Read More →
                                     </button>
                                 </div>

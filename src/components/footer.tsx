@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
      const linkStyle = ({ isActive }: { isActive: boolean }) =>
       isActive
         ? "text-[#9BC53D] font-semibold"
         : "hover:text-[#9BC53D] transition";
-  
+      
+        const navigate = useNavigate();
 
   return (
     <footer className="w-full bg-[#0F172A] border-t border-gray-200 mt-20 bottom-0 left-0 z-50">
@@ -52,10 +54,10 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-2 text-m text-[#D1D5DB]">
-              <li>SIM Card Production</li>
-              <li>Financial Cards</li>
-              <li>Identity Solutions</li>
-              <li>Event Management</li>
+              <li className="cursor-pointer hover:text-white" onClick={() => navigate("/services")}>SIM Card Production</li>
+              <li className="cursor-pointer hover:text-white" onClick={() => navigate("/services")}>Financial Cards</li>
+              <li className="cursor-pointer hover:text-white" onClick={() => navigate("/services")}>Identity Solutions</li>
+              <li className="cursor-pointer hover:text-white" onClick={() => navigate("/services")}>Event Management</li>
             </ul>
           </div>
 
@@ -97,13 +99,13 @@ const Footer = () => {
 
             {/* Right Side */}
              <div className="flex space-x-8">
-                  <NavLink to="/privacy-policy" className="hover:text-[#698ac3] transition">
+                  <NavLink to="/policy" className="hover:text-[#698ac3] transition">
                     Privacy Policy
                   </NavLink>
-                  <NavLink to="/cookie-policy"className="hover:text-[#698ac3] transition">
+                  <NavLink to="/policy"className="hover:text-[#698ac3] transition">
                     Cookie Policy
                   </NavLink>
-                  <NavLink to="/terms-of-service"className="hover:text-[#698ac3] transition">
+                  <NavLink to="/policy"className="hover:text-[#698ac3] transition">
                     Terms of Service
                   </NavLink>
               </div>

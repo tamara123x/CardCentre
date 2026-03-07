@@ -56,11 +56,11 @@ const Nav = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-8 py-6 space-y-5 text-sm text-gray-600">
-          <NavLink to="/" className="block">Home</NavLink>
-          <NavLink to="/about" className="block">About Us</NavLink>
-          <NavLink to="/services" className="block">Services</NavLink>
-          <NavLink to="/resources" className="block">Resources</NavLink>
-          <NavLink to="/career" className="block">Careers</NavLink>
+          <NavLink to="/" className="block" onClick={() => setIsOpen(false)}>Home</NavLink>
+          <NavLink to="/about" className="block" onClick={() => setIsOpen(false)}>About Us</NavLink>
+          <NavLink to="/services" className="block" onClick={() => setIsOpen(false)}>Services</NavLink>
+          <NavLink to="/resources" className="block" onClick={() => setIsOpen(false)}>Resources</NavLink>
+          <NavLink to="/career" className="block" onClick={() => setIsOpen(false)}>Careers</NavLink>
 
           <NavLink
             to="/contact-us"

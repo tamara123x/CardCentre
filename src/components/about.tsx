@@ -1,75 +1,71 @@
 export default function About() {
-    return (
-        <main className="w-full bg-[#FFFFFF]">
+  return (
+    <main className="w-full bg-[#FFFFFF]">
 
-        {/* ================= ABOUT SECTION ================= */}
-            <section className="py-20 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF]">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-5xl font-extrabold text-center mb-12">
-                        About CardCentre Nigeria
-                    </h2>
+      {/* ================= ABOUT SECTION ================= */}
+      <section className="pt-6 pb-1 bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF]">
+        <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-5xl font-extrabold text-center mb-12">
+              About CardCentre Nigeria
+            </h2>
+        </div>
+      </section>
 
-                    <div className="rounded-2xl overflow-hidden shadow-md">
-                        <img src="/Images/about-building.svg" alt="building" className="w-full h-auto object-cover" />
-                    </div>
-                </div>
-            </section>
+      <section className="pb-12">
+        <div className="grid max-w-7xl mx-auto lg:grid-cols-2 gap-12 mt-12 items-center">
+          <div className="text-xl px-4">
+            <h3 className="text-4xl font-bold ">
+              Leading the Smart Card Revolution in Africa
+            </h3>
 
-            <section className="pt-4 pb-12">
-                <div className="grid max-w-7xl mx-auto lg:grid-cols-2 gap-12 mt-16 items-center">
-                        <div className="text-xl px-4">
-                            <h3 className="text-4xl font-bold ">
-                                Leading the Smart Card Revolution in Africa
-                            </h3>
+            <div className="space-y-4 pr-6">
+              <p className="text-gray-600 mt-6">
+                CardCentre Nigeria Limited (CCNL) is a leading smartcard and identity solutions 
+                company providing end-to-end solutions for Financial Services, Telecoms, Government, 
+                Education, Healthcare, Oil & Gas, Energy, Transport, and other strategic sectors.
+              </p>
 
-                            <div className="space-y-4 pr-6">
-                                <p className="text-gray-600 mt-6">
-                                    CardCentre Nigeria Limited (CCNL) is a leading smartcard and identity solutions 
-                                    company providing end-to-end solutions for Financial Services, Telecoms, Government, 
-                                    Education, Healthcare, Oil & Gas, Energy, Transport, and other strategic sectors.
-                                </p>
+              <p className="text-gray-600">
+                Our state of the art manufacturing facilities and certified processes ensure the highest 
+                standards of security, quality, and reliability for our enterprise partners.
+              </p>
 
-                               <p className="text-gray-600">
-                                   Our state of the art manufacturing facilities and certified processes ensure the highest 
-                                   standards of security, quality, and reliability for our enterprise partners.
-                                </p>
+              <p className="text-gray-600">
+                From SIM card production to financial card personalization and comprehensive identity 
+                solutions, we deliver end-to-end services that drive business growth and enhance security.
+              </p>
+            </div>
+          </div>
 
-                                <p className="text-gray-600">
-                                   From SIM card production to financial card personalization and comprehensive identity 
-                                   solutions, we deliver end-to-end services that drive business growth and enhance security.
-                                </p>
-                            </div>
-                        </div>
+          <img src="/Images/about-team.svg" alt="Team" className="rounded-xl shadow-md object-cover h-72 w-full h-auto" />
+        </div>
+      </section>
 
-                        <img src="/Images/about-team.svg" alt="Team" className="rounded-xl shadow-md object-cover h-72 w-full h-auto" />
-                </div>
-            </section>
+      <section className="py-20 bg-[#F8FAFC]">
+        {/* Mission & Vision */}
+        <div className=" max-w-7xl mx-auto grid md:grid-cols-2 gap-10 mt-5">
+          <div className="bg-white py-16 px-10 rounded-2xl shadow-lg">
+            <img src="/Icons/mission.svg" alt="Company Mission Icon" className="w-14 h-14 mb-6 object-contain"/>
+            <h4 className="font-bold text-2xl mb-3">Our Mission</h4>
+            <p className="text-gray-600 text-xl pr-8">
+              To deliver secure, reliable, and innovative card and 
+              identity solutions that drive business growth and customer trust.
+            </p>
+          </div>
 
-            <section className="py-20 bg-[#F8FAFC]">
-                    {/* Mission & Vision */}
-                    <div className=" max-w-7xl mx-auto grid md:grid-cols-2 gap-10 mt-5">
-                       <div className="bg-white py-16 px-10 rounded-2xl shadow-lg">
-                            <img src="/Icons/mission.svg" alt="Company Mission Icon" className="w-12 h-12 mb-6 object-contain"/>
-                            <h4 className="font-bold text-2xl mb-3">Our Mission</h4>
-                            <p className="text-gray-600 text-xl pr-8">
-                                To deliver secure, reliable, and innovative card and 
-                                identity solutions that drive business growth and customer trust.
-                            </p>
-                        </div>
-
-                        <div className="bg-gradient-to-br from-[#9BC53D] to-[#5D7428] py-16 px-10 text-white rounded-2xl shadow-lg">
-                            <img src="/Icons/vision.svg" alt="Company Vision Icon" className="w-12 h-12 mb-6 object-contain"/>
-                            <h4 className="font-bold text-2xl mb-3">Our Vision</h4>
-                            <p className="text-xl">
-                                To be Africa's most trusted smart identity and payment provider, 
-                                recognized for excellence in innovation, security, and customer satisfaction across all markets we serve.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+          <div className="bg-gradient-to-br from-[#9BC53D] to-[#5D7428] py-16 px-10 rounded-2xl shadow-lg">
+            <img src="/Icons/vision.svg" alt="Company Vision Icon" className="w-14 h-14 mb-6 object-contain"/>
+            <h4 className="font-bold text-white text-2xl mb-3">Our Vision</h4>
+            <p className="text-xl text-[#DBEAFE]">
+              To be Africa's most trusted smart identity and payment provider, 
+              recognized for excellence in innovation, security, and customer satisfaction across all markets we serve.
+            </p>
+          </div>
+        </div>
+      </section>
 
 
-            {/* ================= CORE VALUES ================= */}
+      {/* ================= CORE VALUES ================= */}
             <section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -107,7 +103,7 @@ export default function About() {
         <h4 className="text-2xl font-bold text-[#0F172A] mb-3">
           Discipline
         </h4>
-        <p className="text-[#4B5563] text-lg leading-relaxed">
+        <p className="text-[#4B5563] text-lg leading-relaxed px-1">
           Maintaining rigorous standards and processes in everything we do
         </p>
       </div>

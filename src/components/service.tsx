@@ -3,7 +3,7 @@ const Services: React.FC = () => {
     <div className="w-full bg-[#F8FAFC]">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white pt-36 pb-20 px-6 text-center">
+      <section className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white pt-32 pb-20 px-6 text-center">
         <h1 className="text-5xl font-bold mb-4">
           Enterprise Solutions
         </h1>
