@@ -1,201 +1,137 @@
+const services = [
+  {
+    title: "SIM Card Manufacturing",
+    icon: "/Icons/sim.svg",
+    image: "/Images/sim-manufacturing.svg",
+    description:
+      "End-to-end SIM card production, distribution, and supply solutions for Africa's leading telecommunications companies.",
+    benefits: [
+      "State-of-the-art manufacturing facilities",
+      "ISO-certified production processes",
+      "Rapid turnaround and scalable capacity",
+      "Comprehensive distribution network",
+    ],
+  },
+  {
+    title: "Financial Card Solutions",
+    icon: "/Icons/fin.svg",
+    image: "/Images/financial-card.svg",
+    description:
+      "Certified ATM and debit card personalization services for banks and financial institutions across Africa.",
+    benefits: [
+      "MasterCard and Verve certified",
+      "EMV chip and magnetic stripe solutions",
+      "Secure personalization environment",
+      "Complete fulfillment services",
+    ],
+  },
+  {
+    title: "Identity Card Management",
+    icon: "/Icons/id.svg",
+    image: "/Images/identity-card.svg",
+    description:
+      "Comprehensive identity solutions including citizen IDs, loyalty cards, access control, and employee badges.",
+    benefits: [
+      "National ID and citizen card solutions",
+      "Corporate employee ID and access cards",
+      "Loyalty and membership card programs",
+      "Biometric and smart card integration",
+    ],
+  },
+  {
+    title: "Data & Event Management",
+    icon: "/Icons/data.svg",
+    image: "/Images/event-management.svg",
+    description:
+      "Professional event registration, badge printing, and digital attendance solutions for enterprise clients.",
+    benefits: [
+      "On-site event registration systems",
+      "Real-time badge printing and personalization",
+      "Digital attendance tracking and reporting",
+      "Data analytics and insights",
+    ],
+  },
+];
+
 const Services: React.FC = () => {
   return (
     <div className="w-full bg-[#F8FAFC]">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white pt-32 pb-20 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-4">
+      {/* HERO */}
+      <section className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white py-20 md:pt-32 md:pb-20 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Enterprise Solutions
         </h1>
+
         <p className="text-xl text-gray-200 max-w-2xl mx-auto">
           Comprehensive identity and payment solutions designed for Africa’s leading enterprises
         </p>
       </section>
 
-      {/* ================= SERVICES SECTION ================= */}
-      <section className="w-full mx-auto space-y-18">
+      {/* SERVICES */}
+      <section className="lg:space-y-4">
 
-        {/* ===== 1. SIM Card Manufacturing ===== */}
-        <div className="bg-[#FFFFFF] py-20 px-20 grid md:grid-cols-2 items-center">
-          <img
-            src="/Images/sim-manufacturing.svg"
-            alt="SIM Manufacturing"
-            className="mt-8 rounded-2xl"
-          />
+        {services.map((service, index) => {
+          const isReverse = index % 2 !== 0;
 
-          <div className="py-5">
-            <img src="/Icons/sim.svg" alt="SIM Card" className="w-12 h-12 mb-7 object-contain"/>
-            <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
-              SIM Card Manufacturing
-            </h2>
-            <p className="text-[#4B5563] text-xl mb-6 mr-32">
-              End-to-end SIM card production, distribution, and supply solutions for 
-              Africa's leading telecommunications companies.
-            </p>
+          return (
+            <div
+               key={service.title}
+               className={`grid lg:grid-cols-2 gap-14 items-center px-8 md:px-12 lg:px-20 py-20 ${
+               index % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"
+              }`}
+            >
+              {/* IMAGE */}
+              <div className={isReverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="rounded-2xl w-full"
+                />
+              </div>
 
-            <h3 className="font-semibold text-2xl mb-3 text-[#0F172A]">Key Benefits:</h3>
+              {/* TEXT */}
+              <div className={isReverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}>
 
-            <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>State-of-the-art manufacturing facilities</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>ISO-certified production processes</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Rapid turnaround and scalable capacity</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Comprehensive distribution network</span>
-              </li>
-            </ul>
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="w-12 h-12 mb-6"
+                />
 
-            <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-8 py-3 rounded-full text-white font-medium shadow-md">
-              Request Information
-            </button>
-          </div>
-        </div>
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#0F172A]">
+                  {service.title}
+                </h2>
 
-        {/* ===== 2. Financial Card Solutions ===== */}
-        <div className="py-20 px-20 grid md:grid-cols-2 items-center">
-          <div className="py-5 px-12">
-            <img src="/Icons/fin.svg" alt="Financial Card" className="w-12 h-12 mb-7 object-contain"/>
-            <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
-              Financial Card Solutions
-            </h2>
-            <p className="text-[#4B5563] text-xl mb-6 mr-30">
-              Certified ATM and debit card personalization services 
-              for banks and financial institutions across Africa.
-            </p>
+                <p className="text-[#4B5563] text-m md:text-2xl lg:text-xl mb-6 leading-relaxed max-w-xl">
+                  {service.description}
+                </p>
 
-            <h3 className="font-semibold text-2xl mb-3 text-[#0F172A]">Key Benefits:</h3>
+                <h3 className="font-semibold text-lg md:text-3xl lg:text-xl mb-3 text-[#0F172A]">
+                  Key Benefits:
+                </h3>
 
-            <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>MasterCard and Verve certified</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>EMV chip and magnetic stripe solutions</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Secure personalization environment</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Complete fulfillment services</span>
-              </li>
-            </ul>
+                <ul className="space-y-2 text-[#4B5563] mb-8">
+                  {service.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-center gap-3">
+                      <img src="/Icons/mark.svg" className="w-4 h-4" />
+                      <span className="text-m md:text-2xl lg:text-lg">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
 
-            <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-8 py-3 rounded-full text-white font-medium shadow-md">
-              Request Information
-            </button>
-          </div>
+                <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-6 md:px-10 py-3 rounded-full text-white text-m md:text-2xl lg:text-base font-medium shadow-md">
+                  Request Information
+                </button>
 
-          <img
-            src="/Images/financial-card.svg"
-            alt="Financial Card"
-            className="mt-8 rounded-2xl"
-          />
-        </div>
+              </div>
 
-        {/* ===== 3. Identity Card Management ===== */}
-        <div className="py-20 px-20 bg-[#FFFFFF] grid md:grid-cols-2 items-center">
-          <img
-            src="/Images/identity-card.svg"
-            alt="Identity Card"
-            className="mr-8 rounded-2xl"
-          />
-
-          <div className="py-4">
-            <img src="/Icons/id.svg" alt="Identity Card" className="w-12 h-12 mb-7 object-contain"/>
-            <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
-              Identity Card Management
-            </h2>
-            <p className="text-[#4B5563] text-xl mb-6 mr-32">
-              Comprehensive identity solutions including citizen IDs, 
-              loyalty cards, access control, and employee badges.
-            </p>
-
-            <h3 className="font-semibold text-2xl mb-3 text-[#0F172A]">Key Benefits:</h3>
-
-            <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>National ID and citizen card solutions</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Corporate employee ID and access cards</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Loyalty and membership card programs</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Biometric and smart card integration</span>
-              </li>
-            </ul>
-
-            <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-8 py-3 rounded-full text-white font-medium shadow-md">
-              Request Information
-            </button>
-          </div>
-        </div>
-
-        {/* ===== 4. Data & Event Management ===== */}
-        <div className="py-20 px-20 grid md:grid-cols-2 items-center">
-          <div className="py-5 px-12">
-            <img src="/Icons/data.svg" alt="Data & Event Management" className="w-12 h-12 mb-7 object-contain"/>
-            <h2 className="text-4xl font-bold mb-4 text-[#0F172A]">
-              Data & Event Management
-            </h2>
-            <p className="text-[#4B5563] text-xl mb-6 mr-30">
-              Professional event registration, badge printing, and 
-              digital attendance solutions for enterprise clients.
-            </p>
-
-            <h3 className="font-semibold text-2xl mb-3 text-[#0F172A]">Key Benefits:</h3>
-
-            <ul className="space-y-2 text-lg text-[#4B5563] mb-6">
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>On-site event registration systems</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Real-time badge printing and personalization</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Digital attendance tracking and reporting</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <img src="/Icons/mark.svg" alt="Checkmark" className="w-4 h-4" />
-                <span>Data analytics and insights</span>
-              </li>
-            </ul>
-
-            <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-8 py-3 rounded-full text-white font-medium shadow-md">
-              Request Information
-            </button>
-          </div>
-
-          <img
-            src="/Images/event-management.svg"
-            alt="Event Management"
-            className="mr-8rounded-2xl"
-          />
-        </div>
+            </div>
+          );
+        })}
 
       </section>
+
     </div>
   );
 };

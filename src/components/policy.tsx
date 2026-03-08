@@ -1,28 +1,24 @@
-// import React from "react";
-
 const Policy = () => {
   return (
     <section className="bg-[#FFFFFF] min-h-screen">
       
       {/* HERO SECTION */}
-      <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12 px-6 text-center">
+      <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-4 lg:py-10 px-4 sm:px-6 md:px-6 text-center">
         {/* ICON PLACEHOLDER */}
-        <div className="flex justify-center mb-6">
+        <div className="flex flex-col sm:flex-row justify-center items-center mb-6 gap-4">
           {/* Insert your shield icon here */}
+          {/* w-24 h-24 sm:w-32 sm:h-32 */}
           <img src="/Icons/privacy.svg" alt="Privacy" className="mt-8 rounded-2xl"/>
-          <div className="w-12 h-12"></div>
         </div>
 
-        <h1 className="text-5xl font-extrabold text-[#1E293B] mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B] mb-6">
           Privacy & Cookie Policy
         </h1>
       </div>
 
-
       {/* CONTENT SECTION */}
-      <div className="max-w-7xl mx-auto py-16 px-14 space-y-12">
-
-        <p className="text-[#475569] leading-8 text-xl">
+      <div className="max-w-7xl mx-auto py-8 lg:py-12 px-4 sm:px-6 md:px-14 space-y-10">
+        <p className="text-[#475569] leading-7 sm:leading-8 text-base sm:text-lg md:text-2xl lg:text-xl">
           CardCentre Nigeria Limited ("CCNL", "we", "our", or "us") is committed 
           to protecting your privacy and ensuring the security of your personal 
           information. This Privacy and Cookie Policy explains how we collect, use, 
@@ -30,14 +26,11 @@ const Policy = () => {
           Regulation (NDPR) and international standards including GDPR.
         </p>
 
-
         {/* INFORMATION WE COLLECT */}
-        <div className="text-lg">
-          <div className="flex items-center gap-3 mb-4">
-            <div>
-              <img src="/Icons/info.svg" alt="Information" className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1E293B]">
+        <div className="text-base sm:text-lg md:text-xl lg:text-lg">
+          <div className="flex flex-row sm:flex-row items-start sm:items-center gap-3 mb-4">
+            <img src="/Icons/info.svg" alt="Information" className="w-6 h-6"/>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-bold text-[#1E293B]">
               Information We Collect
             </h2>
           </div>
@@ -54,14 +47,11 @@ const Policy = () => {
           </ul>
         </div>
 
-
         {/* COOKIES */}
-        <div className="text-lg">
-          <div className="flex items-center gap-3 mb-4">
-            <div>
-              <img src="/Icons/cookie.svg" alt="Cookies" className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold  text-[#1E293B]">
+        <div className="text-base sm:text-lg md:text-xl lg:text-lg">
+          <div className="flex flex-row sm:flex-row items-start sm:items-center gap-3 mb-4">
+            <img src="/Icons/cookie.svg" alt="Cookies" className="w-6 h-6"/>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-bold text-[#1E293B]">
               Cookies & Tracking Technologies
             </h2>
           </div>
@@ -82,14 +72,11 @@ const Policy = () => {
           </p>
         </div>
 
-
         {/* DATA SECURITY */}
-        <div className="text-lg">
-          <div className="flex items-center gap-3 mb-4">
-            <div>
-              <img src="/Icons/security.svg" alt="Security" className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1E293B]">
+        <div className="text-base sm:text-lg md:text-xl lg:text-lg">
+          <div className="flex flex-row sm:flex-row items-start sm:items-center gap-3 mb-4">
+            <img src="/Icons/security.svg" alt="Security" className="w-6 h-6"/>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-bold text-[#1E293B]">
               Data Security Measures
             </h2>
           </div>
@@ -107,14 +94,11 @@ const Policy = () => {
           </ul>
         </div>
 
-
         {/* YOUR RIGHTS */}
-        <div className="text-lg">
-          <div className="flex items-center gap-3 mb-4">
-            <div>
-              <img src="/Icons/rights.svg" alt="Your Rights" className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1E293B]">
+        <div className="text-base sm:text-lg md:text-xl lg:text-lg">
+          <div className="flex flex-row sm:flex-row items-start sm:items-center gap-3 mb-4">
+            <img src="/Icons/rights.svg" alt="Your Rights" className="w-6 h-6"/>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-bold text-[#1E293B]">
               Your Rights (NDPR & GDPR Aligned)
             </h2>
           </div>
@@ -138,31 +122,29 @@ const Policy = () => {
           </p>
         </div>
 
-
         {/* QUESTIONS BOX */}
-        <div className="border-2 bg-[#F1F5F9] rounded-xl space-y-4 p-8 mt-10">
-          <h3 className="text-xl font-bold text-[#1E293B] mb-4">
+        <div className="border-2 bg-[#F1F5F9] rounded-xl space-y-4 p-6 sm:p-8 mt-10">
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold text-[#1E293B] mb-4">
             Questions About Privacy?
           </h3>
 
-          <div className="text-[#475569] text-lg leading-7">
+          <div className="text-[#475569] text-base sm:text-lg md:text-xl lg:text-lg leading-7">
             <p>
-            If you have any questions or concerns about our privacy practices, 
-            please contact our Data 
-          </p>
-          <p> Protection Officer:</p>
+              If you have any questions or concerns about our privacy practices, 
+              please contact our Data 
+            </p>
+            <p> Protection Officer:</p>
           </div>
 
-          <div className="text-m">
+          <div className="text-base sm:text-lg md:text-xl lg:text-lg">
             <p className="text-[#1E293B] font-medium">
-            Email: info@cardcentre.com.ng
-          </p>
-          <p className="text-[#1E293B] font-medium">
-            Phone: +234 808 034 5389
-          </p>
+              Email: info@cardcentre.com.ng
+            </p>
+            <p className="text-[#1E293B] font-medium">
+              Phone: +234 808 034 5389
+            </p>
           </div>
         </div>
-
       </div>
     </section>
   );

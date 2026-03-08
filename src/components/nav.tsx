@@ -11,20 +11,25 @@ const Nav = () => {
 
   return (
     <nav className="w-full bg-white border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50">
-      <div className="mx-auto px-20 py-2">
+      <div className="mx-auto px-6 md:px-6 lg:px-20 py-2">
         <div className="flex justify-between items-center h-16">
 
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/Icons/logo.svg" alt="CardCentre Nigeria Logo" className="w-14 h-14 object-contain mr-3" />
-            <div className="text-3xl font-extrabold">
+            <img
+              src="/Icons/logo.svg"
+              alt="CardCentre Nigeria Logo"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain mr-2"
+            />
+
+            <div className="text-xl md:text-xl lg:text-3xl font-extrabold">
               <span className="text-[#9BC53D]">CardCentre</span>
               <span className="text-[#0F172A] ml-1 font-medium">Nigeria</span>
             </div>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 text-m font-semibold text-[#374151]">
+          <div className="hidden md:flex items-center space-x-6 md:space-x-4 lg:space-x-8 text-sm lg:text-base font-semibold text-[#374151]">
             <NavLink to="/" className={linkStyle}>Home</NavLink>
             <NavLink to="/about" className={linkStyle}>About Us</NavLink>
             <NavLink to="/services" className={linkStyle}>Services</NavLink>
@@ -33,7 +38,7 @@ const Nav = () => {
 
             <NavLink
               to="/contact-us"
-              className="bg-[#9BC53D] text-white px-8 py-2 rounded-full font-medium hover:bg-[#5e8607] transition"
+              className="bg-[#9BC53D] text-white px-6 md:px-4 lg:px-8 py-2 rounded-full font-medium hover:bg-[#5e8607] transition"
             >
               Contact Us
             </NavLink>
@@ -43,7 +48,7 @@ const Nav = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex flex-col justify-center items-center space-y-1"
+              className="flex flex-col justify-center items-center space-y-1 p-2"
             >
               <span className="w-6 h-0.5 bg-gray-800"></span>
               <span className="w-6 h-0.5 bg-gray-800"></span>
@@ -55,7 +60,7 @@ const Nav = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-8 py-6 space-y-5 text-sm text-gray-600">
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-6 space-y-5 text-base text-gray-700 shadow-md">
           <NavLink to="/" className="block" onClick={() => setIsOpen(false)}>Home</NavLink>
           <NavLink to="/about" className="block" onClick={() => setIsOpen(false)}>About Us</NavLink>
           <NavLink to="/services" className="block" onClick={() => setIsOpen(false)}>Services</NavLink>
@@ -64,7 +69,8 @@ const Nav = () => {
 
           <NavLink
             to="/contact-us"
-            className="block w-full bg-green-500 text-white py-2 rounded-full text-center"
+            className="block w-full bg-[#9BC53D] text-white py-2 rounded-full text-center font-medium"
+            onClick={() => setIsOpen(false)}
           >
             Contact Us
           </NavLink>
