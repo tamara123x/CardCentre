@@ -114,7 +114,7 @@ const Services: React.FC = () => {
                 <ul className="space-y-2 text-[#4B5563] mb-8">
                   {service.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-center gap-3">
-                      <img src="/Icons/mark.svg" className="w-4 h-4" />
+                      <img src="/Icons/mark.svg" alt="mark" className="w-4 h-4" />
                       <span className="text-m md:text-2xl lg:text-lg">{benefit}</span>
                     </li>
                   ))}
