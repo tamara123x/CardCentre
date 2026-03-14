@@ -45,7 +45,7 @@ const Team = () => {
 
           <AnimatedSection direction="up" className="text-center mb-8 lg:mb-14">
             <img
-              src="/Icons/badge.svg"
+              src="/Icons/Badge.svg"
               alt="Badge"
               className="w-24 mb-6 object-contain mx-auto"
             />

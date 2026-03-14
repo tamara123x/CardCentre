@@ -9,7 +9,7 @@ const Bod = () => {
 
           <AnimatedSection direction="up" className="text-center mb-14">
             <img
-              src="/Icons/badge.svg"
+              src="/Icons/Badge.svg"
               alt="Badge"
               className="w-24 mb-6 object-contain mx-auto"
             />
@@ -33,7 +33,7 @@ const Bod = () => {
               {
                 name: "Mr. Akomolafe Kayode",
                 role: "Director",
-                img: "/Images/kayode.png"
+                img: "/Images/Kayode.png"
               },
               {
                 name: "Dr. Olufemi Oyenuga",
