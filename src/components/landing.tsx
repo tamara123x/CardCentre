@@ -1,38 +1,53 @@
 import { useNavigate } from "react-router-dom";
+import AnimatedSection from "./animation"; 
+import { motion } from "framer-motion";
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const backgrounds = [
+  "/Images/background.svg",
+  "/Images/background1.svg",
+  "/Images/background2.svg",
+];
+
+const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
   return (
     <main className="w-full bg-[#f6f8fb]">
-
+      <AnimatedSection>
       {/* ================= HERO SECTION ================= */}
-      <section className="relative mx-auto px-6 md:px-12 lg:px-28 py-10 md:pt-16 md:pb-20 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative mx-auto px-6 md:px-12 lg:px-28 py-10 md:py-28 flex flex-col lg:flex-row items-center gap-10 overflow-hidden">
 
-        <div className="absolute inset-0 h-full w-auto">
-          <img
-            src="/Images/background.svg"
+        {/* Background image */}
+        <div className="absolute inset-0 w-full h-full">
+          <motion.img
+            src={randomBg}
             alt="Background"
             className="w-full h-full object-cover"
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 6 }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F8FAFC]/95 to-[#EFF6FF]/95"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         {/* HERO TEXT */}
-        <div className="relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-[#0f172a]">
-            Innovative Identity <br />
-            & Payment <br />
-            Solutions for <br />
-            Africa’s Enterprises
+        <motion.div
+        initial={{ opacity: 0, x: -80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }} 
+        className="relative z-10 flex-1"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-6xl font-bold leading-tight md:leading-snug lg:leading-snug text-white">
+            Innovative Identity & Payment Solutions for Africa’s Enterprises
           </h1>
-
-          <p className="mt-4 text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-xl">
+          
+          <p className="mt-4 text-[#9BC53D] text-base sm:text-lg md:text-2xl leading-relaxed max-w-xl">
             Leading provider of SIM, financial card, and identity
             solutions across Africa. Trusted by banks, telcos,
             and government institutions.
           </p>
-
+          
           <div className="flex flex-wrap gap-4 mt-8">
             <button
               onClick={() => navigate("/about")}
@@ -48,54 +63,50 @@ export default function LandingPage() {
               Contact Us
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* HERO IMAGES */}
-        <div className="flex justify-center relative z-10 gap-4">
-          <div>
-            <img
-              src="/Images/hero1.svg"
-              alt="hero1"
-              className="rounded-xl object-cover w-32 sm:w-44 md:w-56 lg:w-72"
-            />
-            <img
-              src="/Images/hero3.svg"
-              alt="hero3"
-              className="rounded-xl object-cover w-32 sm:w-44 md:w-56 lg:w-72 mt-6"
-            />
-          </div>
-
-          <div className="mt-8">
-            <img
-              src="/Images/hero2.svg"
-              alt="hero2"
-              className="rounded-xl object-cover w-32 sm:w-44 md:w-56 lg:w-72"
-            />
-            <img
-              src="/Images/hero4.svg"
-              alt="hero4"
-              className="rounded-xl object-cover w-32 sm:w-44 md:w-56 lg:w-72 mt-6"
-            />
-          </div>
+        <div className="relative hidden lg:block z-10 w-[540px] h-[550px]">
+          <motion.img
+            src="/Images/hero1.svg"
+            alt="hero1"
+            className="absolute left-0 top-24 w-68 rounded-xl shadow-lg"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.img
+            src="/Images/hero2.svg"
+            alt="hero2"
+            className="absolute right-0 top-0 w-68 rounded-xl shadow-lg"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.img
+            src="/Images/hero4.svg"
+            alt="hero4"
+            className="absolute right-20 bottom-0 w-68 rounded-xl shadow-lg"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
-
       </section>
+      </AnimatedSection>
 
-
+      <AnimatedSection>
       {/* ================= CORE SOLUTIONS ================= */}
       <section className="bg-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a]">
+          <AnimatedSection className="text-2xl md:text-4xl font-bold text-[#0f172a]">
             Our Core Solutions
-          </h2>
+          </AnimatedSection>
 
-          <p className="text-[#4B5563] text-base md:text-lg lg:text-xl max-w-2xl mx-auto rounded-lg mt-3">
+          <AnimatedSection className="text-[#4B5563] text-base md:text-xl max-w-2xl mx-auto rounded-lg mt-3">
             Comprehensive identity and payment
             solutions tailored for Africa's leading enterprises
-          </p>
+          </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+          <AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 md:mt-14">
             {[
               {
                 icon: "/Icons/sim.svg",
@@ -117,51 +128,60 @@ export default function LandingPage() {
                 title: "Data & Event Management",
                 desc: "Event registration, badge printing, and digital attendance solutions for enterprise clients."
               }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#F8FAFC] px-6 md:px-8 py-10 rounded-xl text-left hover:shadow-md transition"
-              >
-                <img src={item.icon} className="h-10 w-10 mb-6" alt={item.title} />
+            
+              ].map((item, index) => {
+                const bgGradient =
+                index === 0 || index === 2
+                ? "bg-gradient-to-br from-[#9BC53D] to-[#4B5F1D]"
+                : "bg-gradient-to-br from-[#0F172A] to-[#334F90]";
 
-                <h3 className="font-bold text-[#0F172A] text-lg md:text-xl">
-                  {item.title}
-                </h3>
-
-                <p className="text-[#4B5563] text-sm md:text-base mt-4">
-                  {item.desc}
-                </p>
-
-                <p
-                  onClick={() => navigate("/about")}
-                  className="text-[#9BC53D] mt-4 font-medium cursor-pointer"
-                >
-                  Learn More &gt;
-                </p>
-              </div>
-            ))}
+                return (
+                  <div
+                    key={index}
+                    className={`${bgGradient} text-white px-6 md:px-8 py-10 rounded-xl text-left hover:shadow-md transition`}
+                  >
+                    <img src={item.icon} alt={item.title} className="mb-6 w-10 h-10" />
+                    <AnimatedSection className="text-lg md:text-2xl lg:text-xl font-bold mb-2">{item.title}</AnimatedSection>
+                    <AnimatedSection className="text-sm lg:mr-7 md:text-xl lg:text-base">{item.desc}</AnimatedSection>
+                    <AnimatedSection>
+                    <p
+                      onClick={() => navigate("/services")}
+                      className="mt-4 text-sm md:text-xl lg:text-sm font-medium cursor-pointer"
+                    >
+                      Learn More &gt;
+                    </p>
+                    </AnimatedSection>
+                  </div>
+                );
+              })}
           </div>
+          </AnimatedSection>
         </div>
       </section>
+      </AnimatedSection>
 
-
+      <AnimatedSection>
       {/* ================= CERTIFIED & TRUSTED ================= */}
       <section className="bg-gradient-to-br from-[#0F172A] to-[#0F172A] py-12 md:py-20">
 
         <div className="max-w-7xl mx-auto px-6 text-center">
-
+          <AnimatedSection>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
             Certified & Trusted
           </h2>
-
-          <p className="text-gray-300 text-base md:text-lg lg:text-xl mt-3">
+          </AnimatedSection>
+      
+          <AnimatedSection>
+          <p className="text-gray-300 text-base md:text-xl mt-3">
             Accredited by leading global payment networks and industry authorities
           </p>
+          </AnimatedSection>
 
+          <AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12">
 
             <div className="bg-white rounded-xl  py-4 md:py-8 px-6 flex flex-col justify-center items-center">
-              <img src="/Icons/VERVE.svg" alt="Verve" className="h-4 md:h-auto w-auto object-contain" />
+              <img src="/Icons/VERVE.svg" alt="Verve" className="h-8 md:h-auto w-auto object-contain" />
               <p className="text-[#6B7280] md:font-semibold mt-2 text-sm">
                 Certified Partner
               </p>
@@ -187,11 +207,12 @@ export default function LandingPage() {
                 Certified Partner
               </p>
             </div>
-
           </div>
+          </AnimatedSection>
         </div>
 
       </section>
+      </AnimatedSection>
     </main>
   );
 }

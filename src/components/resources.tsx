@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import AnimatedSection from "./animation";
 
 export default function Resources() {
     const navigate = useNavigate();
@@ -6,19 +7,19 @@ export default function Resources() {
     return (
         <main className="w-full bg-[#f6f8fb]">
             {/* ================= RESOURCES & INSIGHTS ================= */}
-            <section className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12 lg:py-20">
+            <AnimatedSection direction="up" className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-12 lg:py-20">
                 <div className="max-w-7xl text-center mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0f172a]">
+                    <AnimatedSection className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0f172a]">
                         Resources & Insights
-                    </h2>
-                    <p className="text-[#4B5563] text-base md:text-lg lg:text-xl mt-3 max-w-2xl mx-auto">
+                    </AnimatedSection>
+                    <AnimatedSection direction="left" className="text-[#4B5563] text-base md:text-lg lg:text-xl mt-3 max-w-2xl mx-auto">
                         Stay informed about the latest trends in identity solutions, payment
                         technology, and digital transformation
-                    </p>
+                    </AnimatedSection>
                 </div>
-            </section>
+            </AnimatedSection>
 
-            <section className="bg-[#FFFFFF] border-b border-gray-200 py-2 pb-6">
+            <AnimatedSection className="bg-[#FFFFFF] border-b border-gray-200 py-2 pb-6">
                 <div className="flex flex-wrap max-w-7xl mx-auto px-6 justify-center gap-4 md:gap-6 mt-4">
                     {[
                        "All Articles",
@@ -41,50 +42,54 @@ export default function Resources() {
                         </button>
                     ))}
                 </div>        
-            </section>
+            </AnimatedSection>
             
-            <section className="bg-white w-full mx-auto p-6 lg:p-20">
+            <AnimatedSection direction="right" className="bg-white w-full mx-auto p-6 lg:p-20">
                 {/* ================= FEATURED ARTICLE ================= */}
                 <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-2">
                     {/* Image */}
+                    <AnimatedSection direction="left">
                     <img
                         src="/Images/featured.svg"
                         alt="Featured Article"
                         className="h-full w-auto object-cover"
                     />
+                    </AnimatedSection>
 
                     {/* Content */}
-                    <div className="p-6 lg:p-10 flex flex-col justify-center">
-                        <p className="text-sm md:text-m font-semibold tracking-wide text-[#9BC53D] uppercase">
+                    <AnimatedSection direction="right" className="p-6 lg:p-10 flex flex-col justify-center">
+                        <AnimatedSection className="text-sm md:text-m font-semibold tracking-wide text-[#9BC53D] uppercase">
                            Featured Article
-                        </p>
+                        </AnimatedSection>
 
-                        <h3 className="text-2xl lg:text-4xl font-bold mt-3 pr-12 lg:mr-28 text-[#0F172A] leading-snug">
+                        <AnimatedSection className="text-2xl lg:text-4xl font-bold mt-3 pr-12 lg:mr-28 text-[#0F172A] leading-snug">
                            The Future of Digital 
                            Identity in Africa
-                        </h3>
+                        </AnimatedSection>
 
-                        <p className="text-[#4B5563] text-base md:text-xl mt-4 lg:pr-28 leading-relaxed">
+                        <AnimatedSection className="text-[#4B5563] text-base md:text-xl mt-4 lg:pr-28 leading-relaxed">
                            Exploring how biometric technology and smart 
                            cards are revolutionizing identity verification 
                            across the continent, enabling secure access to 
                            financial services and government programs.
-                        </p>
+                        </AnimatedSection>
 
-                        <p className="text-[#6B7280] text-sm mt-6">
+                        <AnimatedSection direction="left" className="text-[#6B7280] text-sm mt-6">
                             May 15, 2024 • 8 min read
-                        </p>
+                        </AnimatedSection>
 
+                        <AnimatedSection> 
                         <button 
-                            onClick={() => navigate("/resources-info")}
+                            onClick={() => navigate("/resources-info/featured")}
                             className="text-[#9BC53D] font-medium text-sm md:text-base mt-6 text-left hover:underline">
                             Read Full Article →
                         </button>
-                    </div>
+                        </AnimatedSection>
+                    </AnimatedSection>
                 </div>
-            </section>
+            </AnimatedSection>
 
-            <section className=" max-w-8xl mx-auto bg-[#F8FAFC] lg:py-12 px-6 lg:px-24">
+            <AnimatedSection className=" max-w-8xl mx-auto bg-[#F8FAFC] lg:py-12 px-6 lg:px-24">
                 {/* ================= BLOG GRID ================= */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
                     {[
@@ -150,32 +155,34 @@ export default function Resources() {
                             </div>
 
                             <div className="p-6">
-                                <p className="text-xs pt-6 text-[#9BC53D] font-semibold uppercase tracking-wide">
+                                <AnimatedSection className="text-xs pt-6 text-[#9BC53D] font-semibold uppercase tracking-wide">
                                     {post.category}
-                                </p>
+                                </AnimatedSection>
 
-                                <h3 className="font-bold text-xl md:text-2xl mt-2 leading-snug text-[#0F172A]">
+                                <AnimatedSection className="font-bold text-xl md:text-2xl mt-2 leading-snug text-[#0F172A]">
                                     {post.title}
-                                </h3>
+                                </AnimatedSection>
 
-                                <p className="text-[#4B5563] mr-8 text-base lg:text-lg mt-3">
+                                <AnimatedSection className="text-[#4B5563] mr-8 text-base lg:text-lg mt-3">
                                     {post.desc}
-                                </p>
+                                </AnimatedSection>
 
-                                <p className="text-[#6B7280] text-sm mt-3">
+                                <AnimatedSection className="text-[#6B7280] text-sm mt-3">
                                     {post.date} • {post.read}
-                                </p>
+                                </AnimatedSection>
 
+                                <AnimatedSection>
                                 <button 
-                                    onClick={() => navigate("/resources-info")}
+                                    onClick={() => navigate(`/resources-info/${index}`)}
                                     className="text-[#9BC53D] text-sm mt-4 font-medium hover:underline">
                                     Read More →
                                 </button>
+                                </AnimatedSection>
                             </div>
                         </div>
                     ))}
                 </div>
-            </section>   
+            </AnimatedSection>   
         </main>
     );
 }

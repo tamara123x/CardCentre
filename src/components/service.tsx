@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+import AnimatedSection from "./animation";
+
 const services = [
   {
     title: "SIM Card Manufacturing",
@@ -54,23 +57,24 @@ const services = [
 ];
 
 const Services: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full bg-[#F8FAFC]">
 
       {/* HERO */}
-      <section className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white py-20 md:pt-32 md:pb-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <AnimatedSection direction="up" className="w-full bg-gradient-to-br from-[#14213D] to-[#0F2F76] text-white py-20 md:pt-32 md:pb-20 px-6 text-center">
+        <AnimatedSection className="text-4xl md:text-5xl font-bold mb-4">
           Enterprise Solutions
-        </h1>
+        </AnimatedSection>
 
-        <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+        <AnimatedSection className="text-xl text-gray-200 max-w-2xl mx-auto">
           Comprehensive identity and payment solutions designed for Africa’s leading enterprises
-        </p>
-      </section>
+        </AnimatedSection>
+      </AnimatedSection>
 
       {/* SERVICES */}
       <section className="lg:space-y-4">
-
         {services.map((service, index) => {
           const isReverse = index % 2 !== 0;
 
@@ -82,16 +86,16 @@ const Services: React.FC = () => {
               }`}
             >
               {/* IMAGE */}
-              <div className={isReverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
+              <AnimatedSection direction="right" className={isReverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
                 <img
                   src={service.image}
                   alt={service.title}
                   className="rounded-2xl w-full"
                 />
-              </div>
+              </AnimatedSection>
 
               {/* TEXT */}
-              <div className={isReverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}>
+              <AnimatedSection direction="left" className={isReverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}>
 
                 <img
                   src={service.icon}
@@ -99,18 +103,19 @@ const Services: React.FC = () => {
                   className="w-12 h-12 mb-6"
                 />
 
-                <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#0F172A]">
+                <AnimatedSection className="text-2xl md:text-4xl font-bold mb-4 text-[#0F172A]">
                   {service.title}
-                </h2>
+                </AnimatedSection>
 
-                <p className="text-[#4B5563] text-m md:text-2xl lg:text-xl mb-6 leading-relaxed max-w-xl">
+                <AnimatedSection className="text-[#4B5563] text-m md:text-2xl lg:text-xl mb-6 leading-relaxed max-w-xl">
                   {service.description}
-                </p>
+                </AnimatedSection>
 
-                <h3 className="font-semibold text-lg md:text-3xl lg:text-xl mb-3 text-[#0F172A]">
+                <AnimatedSection className="font-semibold text-lg md:text-3xl lg:text-xl mb-3 text-[#0F172A]">
                   Key Benefits:
-                </h3>
+                </AnimatedSection>
 
+                <AnimatedSection>
                 <ul className="space-y-2 text-[#4B5563] mb-8">
                   {service.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-center gap-3">
@@ -119,19 +124,21 @@ const Services: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                </AnimatedSection>
 
-                <button className="bg-[#9BC53D] hover:bg-[#74a804] transition px-6 md:px-10 py-3 rounded-full text-white text-m md:text-2xl lg:text-base font-medium shadow-md">
+                <AnimatedSection>
+                <button 
+                  className="bg-[#9BC53D] hover:bg-[#74a804] transition px-6 md:px-10 py-3 rounded-full text-white text-m md:text-2xl lg:text-base font-medium shadow-md"
+                  onClick={() => navigate("/contact-us")}
+                >
                   Request Information
                 </button>
-
-              </div>
-
+                </AnimatedSection>
+              </AnimatedSection>
             </div>
           );
         })}
-
       </section>
-
     </div>
   );
 };

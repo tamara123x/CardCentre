@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnimatedSection from "./animation";
 
 const jobs = [
   {
@@ -126,22 +127,22 @@ const Roles = () => {
     <section className="bg-white min-h-screen">
 
       {/* HERO */}
-      <div className="bg-gradient-to-br from-[#14213D] to-[#0F2F76] py-14 mb:py-20 px-6 text-center text-white">
-        <h1 className="text-3xl md:text-5xl font-bold mb-6">
+      <AnimatedSection direction="up" className="bg-gradient-to-br from-[#14213D] to-[#0F2F76] py-14 mb:py-20 px-6 text-center text-white">
+        <AnimatedSection className="text-3xl md:text-5xl font-bold mb-6">
           Join Africa's Leading Identity & Payment Innovators
-        </h1>
+        </AnimatedSection>
 
-        <p className="max-w-2xl mx-auto text-sm md:text-xl text-gray-200 leading-7">
+        <AnimatedSection className="max-w-2xl mx-auto text-sm md:text-xl text-gray-200 leading-7">
           Build your career with a team that's transforming how enterprises
           across Africa manage identity and payments
-        </p>
-      </div>
+        </AnimatedSection>
+      </AnimatedSection>
 
       {/* CONTENT */}
       <div className="max-w-7xl mx-auto pt-16 px-6 grid lg:grid-cols-2 gap-10 lg:gap-12">
 
         {/* JOB LIST */}
-        <div className="space-y-6 lg:pr-10">
+        <AnimatedSection direction="left" className="space-y-6 lg:pr-10">
 
           {jobs.map((job) => (
             <div
@@ -154,80 +155,84 @@ const Roles = () => {
                   : "border-gray-200 hover:bg-gray-50"
               }`}
             >
-              <h3 className="text-lg md:text-2xl lg:text-xl font-semibold text-[#040F24] mb-2">
+              <AnimatedSection className="text-lg md:text-2xl lg:text-xl font-semibold text-[#040F24] mb-2">
                 {job.title}
-              </h3>
+              </AnimatedSection>
 
-              <p className="text-sm md:text-xl lg:text-sm text-[#374151] leading-6">
+              <AnimatedSection className="text-sm md:text-xl lg:text-sm text-[#374151] leading-6">
                 {job.summary}
-              </p>
+              </AnimatedSection>
             </div>
           ))}
 
-        </div>
+        </AnimatedSection>
 
         {/* JOB DETAILS */}
-        <div className="border-t lg:border-t-0 lg:border-l border-gray-200 pt-8 lg:pt-0 lg:pl-8">
+        <AnimatedSection direction="right" className="border-t lg:border-t-0 lg:border-l border-gray-200 pt-8 lg:pt-0 lg:pl-8">
 
-          <h2 className="text-[#9BC53D] text-lg md:text-3xl lg:text-xl font-semibold mb-4">
+          <AnimatedSection className="text-[#9BC53D] text-lg md:text-3xl lg:text-xl font-semibold mb-4">
             {selectedJob.title}
-          </h2>
+          </AnimatedSection>
 
-          <div className="mb-6">
-            <h4 className="font-semibold text-base md:text-2xl lg:text-lg text-[#374151] mb-2">
+          <AnimatedSection direction="right" className="mb-6">
+            <AnimatedSection className="font-semibold text-base md:text-2xl lg:text-lg text-[#374151] mb-2">
               Primary Responsibility
-            </h4>
+            </AnimatedSection>
 
-            <p className="text-sm md:text-xl lg:text-base text-[#374151] leading-6">
+            <AnimatedSection direction="right" className="text-sm md:text-xl lg:text-base text-[#374151] leading-6">
               {selectedJob.responsibility}
-            </p>
-          </div>
+            </AnimatedSection>
+          </AnimatedSection>
 
           <div className="mb-6">
-            <h4 className="font-semibold text-base md:text-2xl lg:text-lg text-[#374151] mb-3">
+            <AnimatedSection direction="right" className="font-semibold text-base md:text-2xl lg:text-lg text-[#374151] mb-3">
               Job Specification
-            </h4>
+            </AnimatedSection>
 
+            <AnimatedSection direction="right">
             <ul className="list-disc marker:text-[#9BC53D] pl-6 text-sm md:text-xl lg:text-base text-[#374151] space-y-2">
               {selectedJob.specs.map((spec, i) => (
                 <li key={i}>{spec}</li>
               ))}
             </ul>
+            </AnimatedSection>
           </div>
 
           {/* ROLE INFO */}
-          <div className="space-y-3 text-sm md:text-xl lg:text-base text-[#374151] mb-8">
-            <p>
+          <AnimatedSection className="space-y-3 text-sm md:text-xl lg:text-base text-[#374151] mb-8">
+            <AnimatedSection>
               <span className="font-semibold">Employment Type:</span>{" "}
               {selectedJob.type}
-            </p>
+            </AnimatedSection>
 
-            <p>
+            <AnimatedSection>
               <span className="font-semibold">Work Place Type:</span>{" "}
               {selectedJob.workplace}
-            </p>
+            </AnimatedSection>
 
-            <p>
+            <AnimatedSection>
               <span className="font-semibold">Salary:</span>{" "}
               {selectedJob.Salary}
-            </p>
+            </AnimatedSection>
 
-            <p>
+            <AnimatedSection>
               <span className="font-semibold">Experience Required:</span>{" "}
               {selectedJob.experience}
-            </p>
+            </AnimatedSection>
 
-            <p>
+            <AnimatedSection>
               <span className="font-semibold">Job Location:</span>{" "}
               {selectedJob.location}
-            </p>
-          </div>
+            </AnimatedSection>
+          </AnimatedSection>
 
+          <AnimatedSection>
           <button className="bg-[#9BC53D] hover:bg-[#85be09] text-white text-sm md:text-xl lg:text-sm  px-7 py-3 rounded-full transition">
             Apply Now
           </button>
+          </AnimatedSection>
 
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

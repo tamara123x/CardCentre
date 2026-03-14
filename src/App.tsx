@@ -14,17 +14,16 @@ import Roles from "./components/roles";
 import Policy from "./components/policy";
 import About from "./components/about";
 import AboutUS from "./components/aboutus";
+import Bod from "./components/bod";
+import Team from "./components/team";
 
 function App() {
   return (
     <>
       <Nav />
-
-      {/* Scroll page to top on route change */}
       <ScrollToTop />
 
       <div className="pt-20">
-
         <Routes>
 
           {/* HOME */}
@@ -48,7 +47,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
 
           {/* RESOURCE BLOG */}
-          <Route path="/resources-info" element={<ResourcesInfo />} />
+          <Route path="/resources-info/:id" element={<ResourcesInfo />} />
 
           {/* CAREER */}
           <Route path="/career" element={<Career />} />
@@ -61,6 +60,12 @@ function App() {
 
           {/* POLICY PAGE */}
           <Route path="/policy" element={<Policy />} />
+
+          {/* BOARD OF DIRECTORS PAGE */}
+          <Route path="/Bod" element={<Bod />} />
+
+          {/* MANAGEMENT TEAM */}
+          <Route path="/Team" element={<Team />} />
 
         </Routes>
 
