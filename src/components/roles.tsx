@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AnimatedSection from "./animation";
 
 const jobs = [
@@ -122,6 +123,7 @@ const jobs = [
 
 const Roles = () => {
   const [selectedJob, setSelectedJob] = useState(jobs[0]);
+  const navigate = useNavigate();
 
   return (
     <section className="bg-white min-h-screen">
@@ -164,6 +166,12 @@ const Roles = () => {
               </AnimatedSection>
             </div>
           ))}
+          
+          <button 
+          onClick={() => navigate("/career")}
+          className="bg-[#9BC53D] hover:bg-[#85be09] text-white text-sm md:text-xl lg:text-sm  px-7 py-3 rounded-full transition">
+            Back
+          </button>
 
         </AnimatedSection>
 
@@ -227,9 +235,13 @@ const Roles = () => {
           </AnimatedSection>
 
           <AnimatedSection>
-          <button className="bg-[#9BC53D] hover:bg-[#85be09] text-white text-sm md:text-xl lg:text-sm  px-7 py-3 rounded-full transition">
+          <button 
+          onClick={() => navigate("/contact-us")}
+          className="bg-[#9BC53D] hover:bg-[#85be09] text-white text-sm md:text-xl lg:text-sm  px-7 py-3 rounded-full transition">
             Apply Now
           </button>
+
+          
           </AnimatedSection>
 
         </AnimatedSection>
