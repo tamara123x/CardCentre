@@ -156,7 +156,7 @@ const Career: React.FC = () => {
           
           <AnimatedSection direction="right">
           <button
-            onClick={() => navigate("/roles")}
+            onClick={() => navigate("/contact-us")}
             className="border-2 border-[#9BC53D] text-[#9BC53D] hover:bg-green-50 transition text-sm md:text-lg px-4 md:px-8 py-3 rounded-full font-medium"
           >
             Submit Your CV
