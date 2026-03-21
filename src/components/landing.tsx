@@ -111,22 +111,26 @@ const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
               {
                 icon: "/Icons/sim.svg",
                 title: "SIM Card Production",
-                desc: "Advanced SIM manufacturing, distribution, and supply solutions for Africa's leading telecom operators."
+                desc: "Advanced SIM manufacturing, distribution, and supply solutions for Africa's leading telecom operators.",
+                link: "#sim",
               },
               {
                 icon: "/Icons/fin.svg",
                 title: "Financial Card Solutions",
-                desc: "Certified ATM and debit card personalization services for banks and financial institutions."
+                desc: "Certified ATM and debit card personalization services for banks and financial institutions.",
+                link: "#financial",
               },
               {
                 icon: "/Icons/id.svg",
                 title: "Identity Card Management",
-                desc: "Comprehensive ID solutions including citizen IDs, loyalty cards, and access control systems."
+                desc: "Comprehensive ID solutions including citizen IDs, loyalty cards, and access control systems.",
+                link: "#identity",
               },
               {
                 icon: "/Icons/data.svg",
                 title: "Data & Event Management",
-                desc: "Event registration, badge printing, and digital attendance solutions for enterprise clients."
+                desc: "Event registration, badge printing, and digital attendance solutions for enterprise clients.",
+                link: "#data",
               }
             
               ].map((item, index) => {
@@ -145,7 +149,7 @@ const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
                     <AnimatedSection className="text-sm lg:mr-7 md:text-xl lg:text-base">{item.desc}</AnimatedSection>
                     <AnimatedSection>
                     <p
-                      onClick={() => navigate("/services")}
+                      onClick={() => navigate(`/services${item.link}`)}
                       className="mt-4 text-sm md:text-xl lg:text-sm font-medium cursor-pointer"
                     >
                       Learn More &gt;

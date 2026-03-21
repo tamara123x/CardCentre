@@ -1,8 +1,11 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import AnimatedSection from "./animation";
 
 const services = [
   {
+    id: "sim",
     title: "SIM Card Manufacturing",
     icon: "/Icons/sim.svg",
     image: "/Images/sim-manufacturing.svg",
@@ -16,6 +19,7 @@ const services = [
     ],
   },
   {
+    id: "financial",
     title: "Financial Card Solutions",
     icon: "/Icons/fin.svg",
     image: "/Images/financial-card.svg",
@@ -29,6 +33,7 @@ const services = [
     ],
   },
   {
+    id: "identity",
     title: "Identity Card Management",
     icon: "/Icons/id.svg",
     image: "/Images/identity-card.svg",
@@ -42,6 +47,7 @@ const services = [
     ],
   },
   {
+    id: "data",
     title: "Data & Event Management",
     icon: "/Icons/data.svg",
     image: "/Images/event-management.svg",
@@ -58,6 +64,19 @@ const services = [
 
 const Services: React.FC = () => {
   const navigate = useNavigate();
+    const location = useLocation();
+
+  // ✅ Smooth scroll to section when URL has hash
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.substring(1));
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // small delay ensures DOM is ready
+      }
+    }
+  }, [location]);
 
   return (
     <div className="w-full bg-[#F8FAFC]">
@@ -81,6 +100,7 @@ const Services: React.FC = () => {
           return (
             <div
                key={service.title}
+               id={service.id}
                className={`grid lg:grid-cols-2 gap-14 items-center px-8 md:px-12 lg:px-20 py-20 ${
                index % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"
               }`}
