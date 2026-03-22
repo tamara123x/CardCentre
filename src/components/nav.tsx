@@ -26,7 +26,7 @@ const Nav = () => {
             </NavLink>
 
             <div className="text-xl md:text-xl lg:text-3xl font-extrabold">
-              <span className="text-[#9BC53D]">CardCentre Nigeria</span>
+              <span className="text-[#4BA460]">CardCentre Nigeria</span>
             </div>
           </div>
 

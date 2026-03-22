@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <AnimatedSection direction="left">
             <div className="text-xl md:text-2xl font-bold">
-              <span className="text-[#9BC53D]">CardCentre Nigeria</span>
+              <span className="text-[#4BA460]">CardCentre Nigeria</span>
             </div>
 
             <AnimatedSection className="mt-4 mb-6 text-sm md:text-base lg:pr-12 text-[#9CA3AF] leading-6">
