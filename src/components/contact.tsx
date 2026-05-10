@@ -1,6 +1,21 @@
 import AnimatedSection from "./animation";
+import { useState } from "react";
 
 const Contact = () => {
+  const [showMessage, setShowMessage] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  // Your existing submit logic here
+
+  // Show success message
+  setShowMessage(true);
+
+  // Hide after 4 seconds
+  setTimeout(() => {
+    setShowMessage(false);
+  }, 4000);
+}; 
   return (
     <section className="w-full bg-white">
       <div className="mx-auto">
@@ -18,7 +33,7 @@ const Contact = () => {
           </AnimatedSection>
         </div>
         </AnimatedSection>
-
+    
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start px-6 md:px-12 lg:px-28">
 
@@ -137,7 +152,7 @@ const Contact = () => {
 
           {/* Right Side - Form */}
           <AnimatedSection direction="right" className="pt-20 md:pt-0 lg:pt-0">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
 
               <AnimatedSection className="text-2xl md:text-3xl font-bold text-gray-900">
                 Send Us a Message
@@ -207,6 +222,19 @@ const Contact = () => {
               <AnimatedSection className="text-center text-sm md:text-base text-[#6B7280]">
                 We'll respond to your inquiry within 24 business hours
               </AnimatedSection>
+
+              {showMessage && (
+                <AnimatedSection direction="up">
+                  <div className="flex justify-center mb-6">
+                    <button
+                      type="button"
+                      className="bg-[#EEF7D8] text-[#9BC53D] py-3 px-6 rounded-full text-sm md:text-base font-medium shadow-sm"
+                    >
+                      Message sent! Thank you for reaching out to us!
+                    </button>
+                  </div>
+                </AnimatedSection>
+             )}
 
             </form>
           </AnimatedSection>

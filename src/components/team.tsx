@@ -33,6 +33,12 @@ const Team = () => {
         desc: "An Information Security and Governance Executive with degrees in engineering and IT from Moshood Abiola Polytechnic, Ladoke Akintola University of Technology, and National Open University of Nigeria. He is Chief Information Security Officer and Head of Internal Audit and Compliance at CardCentre Nigeria Limited. He oversees security, compliance, and audit functions, protecting critical operations and driving risk-based decision-making. ",
         img: "/Images/abiodun.png"
      },
+     {
+        name: "Mr. Olawale Ojo",
+        role: "Head of Accounts and Finance",
+        desc: "Olawale Ojo, BSc, MBA, ACA, is a highly detail oriented and results driven accountant with over 12 years of experience in financial reporting, budgeting, and tax compliance. He specializes in managing financial records, preparing statements, reconciling accounts, and ensuring regulatory compliance. Proficient in accounting tools, he leverages strong analytical and organizational skills to deliver accurate, timely insights that support strategic decision-making. ",
+        img: "/Images/ojo.png"
+     },
   ];
 
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
